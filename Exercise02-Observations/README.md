@@ -18,8 +18,8 @@ Module 2 will be focused on the basic steps to load and analyze the Medical Data
 2. Select + (Add new resource) > **Data Explorer Database** and paste the following information:  
    | Setting | Value | Description |
    |:------|:------|:------
-   | Data Explorer Pool Name | MedicalDx | The name of the Data Explorer pool to use |
-   | Name | MedDatabase | This database name must be unique within the cluster. |
+   | Data Explorer Pool Name | medicaldx | The name of the Data Explorer pool to use |
+   | Name | meddatabase | This database name must be unique within the cluster. |
    | Default retention period | 365 | The time span (in days) for which it's guaranteed that the data is kept available to query. The time span is measured from the time that data is ingested. |   
    |Default cache period | 31 | The time span (in days) for which to keep frequently queried data available in SSD storage or RAM, rather than in longer-term storage  
 3. Select **Create** to create the database. Creation typically takes less than a minute. 

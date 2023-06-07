@@ -6,7 +6,7 @@ Module 2 will be focused on the basic steps to load and analyze the Medical Data
 2. Select **New**, and then enter the following details on the **Basics** tab:  
    | Setting | Value | Description |
    |:------|:------|:------
-   | Data Explorer Pool Name | MedicalDx | This is the name the Data Explorer pool will have |
+   | Data Explorer Pool Name | medicaldx | This is the name the Data Explorer pool will have |
    | Workload | Compute Optimized | This workload provides a higher CPU to SSD storage ratio. |
    | Node Size | Small(4 cores) | Set this to the smallest size to reduce costs for this quickstart |  
  3. Select **Review + Create > Create.** Your data explorer will start the provisioning process. Once it is complete move on to the next step.
@@ -21,10 +21,27 @@ Module 2 will be focused on the basic steps to load and analyze the Medical Data
    | Default retention period | 365 | The time span (in days) for which it's guaranteed that the data is kept available to query. The time span is measured from the time that data is ingested. |   
    |Default cache period | 31 | The time span (in days) for which to keep frequently queried data available in SSD storage or RAM, rather than in longer-term storage  
 3. Select **Create** to create the database. Creation typically takes less than a minute. 
+## Ingesting Medical data  
+
+1. In Synapse studio, on the left-side pane, select **Data** 
+2. Right-click ADX database and click on **Open in Azure Data Explorer**. This opens the Azure Data Explorer web UI. 
+3. Once in the web UI click on the **Data** tab on the left. This opens the ADX "One-Click UI", where you can quickly ingest data, create database tables, and automatically map the table schema.  
+4. Click on **Ingest data**, and then enter the following details:
+   | Setting | Value | Description |
+   |:------|:------|:------
+   | Cluster | MedDatabase  | Enter name of Data Explorer pool created |
+   | Database | Patientnamesdatabase | Enter name of database created |
+   | New Table | Patientnamestable | Enter the name for the table that will hold the medical data | 
+6. Select **Next**, and then enter the following information for **Source**:
+   - Under *Source type* choose **File**.
+   - 
+   - Ensure the **Medidata.csv** file was properly uploaded by seeing a green checkmark under the **status** column.
+7.  Select **Next: Schema** and leave all the information as default. This page displays the schema and a partial data preview of the **medidata** that will be created.
+8.  Select **Next: Start Ingestion** and this will begin the ingestion process for the data. It is complete once all the files display a green checkmark. Click **Close** to complete.
+9.  Validate ingestion by selecting **Query** on the left-side pane, clicking on the Patientnamesdatabase -> Patientnamestable and you will see all of the data within the table. The same will be found in Synapse studio. 
 # Objective
 * This pipeline takes the JSON data that is in FHIR standard format from our "raw" ADLS container and converts it to parquet.  Since Parquet is a columnar compressed file format this makes it much faster to import and work with the data.  We store the parquet output in our "processed" container in ADLS under a folder called "Observation".
 ![image](https://user-images.githubusercontent.com/59613090/193125969-460256eb-b025-4e56-8e16-ad10677b54f2.png)
-
 
 * We plan to eventually load this data into Dedicated SQL Pool in a table called [fhir].[ObservationMain].  We need to extract the data needed for the table, clean it, and write it back to ADLS.  The second activity in our pipeline handles all of this in a single Synapse Spark Notebook.
 ![image](https://user-images.githubusercontent.com/59613090/193125858-14673041-4408-4afb-a0f2-3017de0c4550.png)

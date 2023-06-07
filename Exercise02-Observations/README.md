@@ -9,8 +9,11 @@ Module 2 will be focused on the basic steps to load and analyze the Medical Data
    | Data Explorer Pool Name | medicaldx | This is the name the Data Explorer pool will have |
    | Workload | Compute Optimized | This workload provides a higher CPU to SSD storage ratio. |
    | Node Size | Small(4 cores) | Set this to the smallest size to reduce costs for this quickstart |  
- 3. Select **Review + Create > Create.** Your data explorer will start the provisioning process. Once it is complete move on to the next step.
-
+ 3. Select **Review + Create > Create.** Your data explorer will start the provisioning process. Once it is complete move on to the next step  
+ 
+ ![Creating ADX pool](Images/Gif1.gif)  
+ 
+ 
 ## Create a Data Explorer Database  
 1. In Synapse Studio, on the left-side pane, Select **Data**.  
 2. Select + (Add new resource) > **Data Explorer Database** and paste the following information:  

@@ -31,9 +31,9 @@ Module 2 will be focused on the basic steps to load and analyze the Medical Data
 4. Click on **Ingest data**, and then enter the following details:
    | Setting | Value | Description |
    |:------|:------|:------
-   | Cluster | MedDatabase  | Enter name of Data Explorer pool created |
-   | Database | Patientnamesdatabase | Enter name of database created |
-   | New Table | Patientnamestable | Enter the name for the table that will hold the medical data | 
+   | Cluster | meddatabase  | Enter name of Data Explorer pool created |
+   | Database | patientnamesdatabase | Enter name of database created |
+   | New Table | patientnamestable | Enter the name for the table that will hold the medical data | 
 6. Select **Next**, and then enter the following information for **Source**:
    - Under *Source type* choose **File**.
    - 

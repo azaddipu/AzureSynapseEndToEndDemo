@@ -11,9 +11,8 @@ Module 2 will be focused on the basic steps to load and analyze the Medical Data
    | Node Size | Small(4 cores) | Set this to the smallest size to reduce costs for this quickstart |  
  3. Select **Review + Create > Create.** Your data explorer will start the provisioning process. Once it is complete move on to the next step  
  
- ![Creating ADX pool](Images/Gif1.gif)  
- 
- 
+ ![Creating ADX pool](https://github.com/azaddipu/AzureSynapseEndToEndDemo/blob/main/Images/Gif1.gif)
+  
 ## Create a Data Explorer Database  
 1. In Synapse Studio, on the left-side pane, Select **Data**.  
 2. Select + (Add new resource) > **Data Explorer Database** and paste the following information:  

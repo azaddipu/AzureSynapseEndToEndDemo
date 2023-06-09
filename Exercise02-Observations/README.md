@@ -23,8 +23,10 @@ Module 2 will be focused on the basic steps to load and analyze the Medical Data
    | Default retention period | 365 | The time span (in days) for which it's guaranteed that the data is kept available to query. The time span is measured from the time that data is ingested. |   
    |Default cache period | 31 | The time span (in days) for which to keep frequently queried data available in SSD storage or RAM, rather than in longer-term storage  
 3. Select **Create** to create the database. Creation typically takes less than a minute. 
-## Ingesting Medical data  
+## Ingesting Medical data    
 
+ ![Creating ADX pool](https://github.com/azaddipu/AzureSynapseEndToEndDemo/blob/c8918fde1a40ed8c59c5d13c7ce933b233c4b39f/Images/Gif1.gif)
+ 
 1. In Synapse studio, on the left-side pane, select **Data** 
 2. Right-click ADX database and click on **Open in Azure Data Explorer**. This opens the Azure Data Explorer web UI. 
 3. Once in the web UI click on the **Data** tab on the left. This opens the ADX "One-Click UI", where you can quickly ingest data, create database tables, and automatically map the table schema.  
